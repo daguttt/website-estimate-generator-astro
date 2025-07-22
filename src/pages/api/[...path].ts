@@ -1,16 +1,14 @@
 import type { APIRoute } from 'astro';
-import { Hono } from 'hono';
-
-import { estimatesRouter } from '@/server/features/estimates';
-import { trimTrailingSlash } from 'hono/trailing-slash';
+import { createServerApp } from '@/server';
 
 export const prerender = false;
 
-const app = new Hono<{ Bindings: CloudflareBindings }>().basePath('/api');
-app.use(trimTrailingSlash());
+const app = createServerApp();
 
-app.route('/estimate-generator', estimatesRouter);
-
-// Map all request to the Hono app
+// Map all request to the server app
 export const ALL: APIRoute = (context) =>
-  app.fetch(context.request, context.locals.runtime.env);
+  app.fetch(
+    context.request,
+    context.locals.runtime.env,
+    context.locals.runtime.ctx
+  );

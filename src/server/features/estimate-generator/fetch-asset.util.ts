@@ -1,18 +1,16 @@
 import type { Context } from 'hono';
-import type { RouterEnv } from './router-env.model';
 import { ResultAsync } from 'neverthrow';
 
-interface FetchAssetError {
-  type: 'FETCH_ASSET_ERROR';
-  context?: Record<string, unknown>;
-}
+import type { ServerError } from '@server/features/shared-errors';
 
-function intoFetchAssetError(
-  context?: Record<string, unknown>
-): FetchAssetError {
+import type { RouterEnv } from './router-env.model';
+
+type FetchAssetError = ServerError<'FETCH_ASSET_ERROR'>;
+
+function intoFetchAssetError(meta?: Record<string, unknown>): FetchAssetError {
   return {
     type: 'FETCH_ASSET_ERROR',
-    context,
+    meta,
   };
 }
 

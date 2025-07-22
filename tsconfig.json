@@ -8,6 +8,8 @@
     "jsxImportSource": "solid-js",
     "baseUrl": ".",
     "paths": {
+      "@pages/*": ["./src/pages/*"],
+      "@server/*": ["./src/server/*"],
       "@/*": ["./src/*"]
     }
   }

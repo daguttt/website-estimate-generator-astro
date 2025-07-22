@@ -30,14 +30,22 @@ function intoBrowserRenderingError(
 function createNewPage(browser: Browser) {
   return ResultAsync.fromPromise(browser.newPage(), () =>
     intoBrowserRenderingError('COULD_NOT_CREATE_PAGE')
-  ).andTee(() => console.debug(`[DEBUG] Created page succesfully`));
+  ).andTee(() =>
+    console.debug(
+      JSON.stringify({ debugMessage: '[DEBUG] Created page succesfully' })
+    )
+  );
 }
 
 function setPageContent(html: string) {
   return (page: Page) => {
     return ResultAsync.fromPromise(page.setContent(html), () =>
       intoBrowserRenderingError('COULD_NOT_SET_PAGE_CONTENT')
-    ).andTee(() => console.debug('[DEBUG] Page content set succesfully'));
+    ).andTee(() =>
+      console.debug(
+        JSON.stringify({ debugMessage: '[DEBUG] Page content set succesfully' })
+      )
+    );
   };
 }
 
@@ -54,7 +62,11 @@ function generatePdfFromPage(page: Page) {
       },
     }),
     () => intoBrowserRenderingError('COULD_NOT_GENERATE_PDF')
-  ).andTee(() => console.debug('[DEBUG] PDF generated successfully'));
+  ).andTee(() =>
+    console.debug(
+      JSON.stringify({ debugMessage: '[DEBUG] PDF generated successfully' })
+    )
+  );
 }
 
 export function generatePdfFromHtml(

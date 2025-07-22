@@ -8,11 +8,13 @@ export const extractHtmlTemplateMw = createMiddleware<RouterEnv>(
       path: '/estimate-website-template-for-ai.html',
     }).map((response) => response.text());
 
-    if (fetchAssetRes.isErr())
+    if (fetchAssetRes.isErr()) {
+      console.error(JSON.stringify(fetchAssetRes.error));
       return c.json(
         { message: 'Failed to load template', error: fetchAssetRes.error },
         500
       );
+    }
 
     c.set('htmlTemplate', fetchAssetRes.value);
     await next();

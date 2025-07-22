@@ -6,6 +6,7 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "website-estimate-generator-astro",
 	"main": "./dist/_worker.js/index.js",
+	"upload_source_maps": true,
 	"compatibility_date": "2025-07-19",
 	"compatibility_flags": [
 		"nodejs_compat",
@@ -19,7 +20,12 @@
 		"binding": "BROWSER"
 	},
 	"observability": {
-		"enabled": true
+		"enabled": true,
+		"head_sampling_rate": 1,
+		"logs": {
+			"head_sampling_rate": 1,
+			"invocation_logs": true,
+		}
 	}
 	/**
 	 * Smart Placement

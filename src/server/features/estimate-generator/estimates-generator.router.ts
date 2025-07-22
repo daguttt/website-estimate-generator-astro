@@ -37,6 +37,7 @@ export const router = new Hono<RouterEnv>()
       });
 
       if (pdfBufferResult.isErr()) {
+        console.error(JSON.stringify(pdfBufferResult.error));
         return c.json(
           { error: 'Failed to generate PDF', err: pdfBufferResult.error },
           500

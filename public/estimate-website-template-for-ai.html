@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Development Estimate</title>
+    <style>
+      /* --- Reset & Base Styles --- */
+      @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+      body {
+        font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f7f6;
+        color: #333;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* --- Main Container --- */
+      .container {
+        max-width: 800px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        padding: 40px;
+      }
+
+      /* --- Header --- */
+      header {
+        border-bottom: 3px solid #2b3a67;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        text-align: right;
+      }
+
+      header h1 {
+        margin: 0;
+        color: #2b3a67;
+        font-size: 28px;
+        font-weight: 700;
+      }
+
+      header p {
+        margin: 2px 0;
+        font-size: 14px;
+        color: #555;
+      }
+
+      /* --- Section Styles --- */
+      section {
+        margin-bottom: 35px;
+      }
+
+      h2 {
+        color: #2b3a67;
+        font-size: 22px;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 10px;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        color: #2b3a67;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      p,
+      li {
+        font-size: 16px;
+        color: #444;
+      }
+
+      ul {
+        list-style-type: disc;
+        padding-left: 25px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      strong {
+        color: #2b3a67;
+      }
+
+      /* --- Client Info & Estimate Details --- */
+      .estimate-details {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+      }
+
+      .estimate-details div {
+        width: 48%;
+      }
+
+      .estimate-details p {
+        margin: 4px 0;
+        font-size: 14px;
+      }
+
+      /* --- Tables --- */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      thead th {
+        background-color: #2b3a67;
+        color: #ffffff;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 13px;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+
+      .total-row td {
+        font-weight: 700;
+        font-size: 18px;
+        background-color: #f1f3f9;
+        color: #2b3a67;
+      }
+
+      /* --- Specific Sections --- */
+      #next-steps {
+        background-color: #f8f9fa;
+        border-left: 4px solid #2b3a67;
+        padding: 20px;
+      }
+
+      #next-steps ol {
+        padding-left: 25px;
+      }
+
+      /* --- Footer & Acceptance --- */
+      footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      .signature-area {
+        padding-top: 20px;
+      }
+
+      .signature-line {
+        border-bottom: 1px solid #555;
+        height: 40px;
+        margin-bottom: 5px;
+      }
+
+      .signature-label {
+        font-size: 12px;
+        color: #666;
+      }
+
+      /* --- Responsive --- */
+      @media (max-width: 600px) {
+        .container {
+          padding: 20px;
+          margin: 10px;
+        }
+        .estimate-details {
+          flex-direction: column;
+        }
+        .estimate-details div {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+        header {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>[Your Company Name/Your Name]</h1>
+        <p>[Your Address]</p>
+        <p>[Your Email] | [Your Phone Number]</p>
+        <p>[Your Website]</p>
+      </header>
+
+      <main>
+        <div class="estimate-details">
+          <div>
+            <h3>Prepared For:</h3>
+            <p>
+              <strong>Client:</strong> [Client_Name]<br />
+              <strong>Company:</strong> [Client_Company_Name]
+            </p>
+          </div>
+          <div>
+            <h3>Estimate Details:</h3>
+            <p>
+              <strong>Date:</strong> [AI: Insert current date]<br />
+              <strong>Estimate #:</strong> [AI: Generate a unique estimate
+              number]<br />
+              <strong>Valid Until:</strong> [AI: Insert date 30 days from now]
+            </p>
+          </div>
+        </div>
+
+        <section id="summary">
+          <h2>1. Executive Summary: A Partnership for Growth</h2>
+          <p>Hello [Client_Name],</p>
+          <p>
+            Thank you for the opportunity to provide a proposal for your new
+            website. We've carefully reviewed your requirements and are excited
+            about the prospect of building a powerful digital platform that not
+            only meets but exceeds your expectations.
+          </p>
+          <p>
+            <em>
+              [AI: Write a compelling 2-3 sentence summary of the project,
+              framing it as a solution to the client's stated needs from the
+              `detailed_description`. Focus on the primary business goal, e.g.,
+              "This project will deliver a modern, responsive e-commerce
+              platform designed to streamline your sales process and
+              significantly boost online revenue."]
+            </em>
+          </p>
+          <p>
+            We are confident that our approach will deliver a high-quality,
+            scalable, and engaging website that serves as a core asset for your
+            business.
+          </p>
+        </section>
+
+        <section id="goals">
+          <h2>2. Project Goals: Understanding Your Vision</h2>
+          <p>
+            Based on our understanding of your needs, this project will focus on
+            achieving the following key objectives:
+          </p>
+          <ul>
+            <li>
+              [AI: Based on the client's `detailed_description`, list 3-5 key
+              business objectives this website aims to achieve. Use a bulleted
+              list.]
+            </li>
+            <li>
+              Example: Generate qualified leads through a streamlined contact
+              and inquiry process.
+            </li>
+            <li>
+              Example: Establish [Client_Company_Name] as an industry leader
+              with a professional and authoritative online presence.
+            </li>
+          </ul>
+        </section>
+
+        <section id="scope">
+          <h2>3. Proposed Solution & Scope of Work</h2>
+          <p>
+            To achieve your goals, we propose the development of a custom
+            website built on a modern and reliable technology stack.
+          </p>
+          <ul>
+            <li>
+              <strong>Core Technology:</strong> [AI: Suggest a relevant tech
+              stack, e.g., "React (Next.js) for the frontend, Node.js for the
+              backend, and Strapi/Sanity as a headless CMS for easy content
+              management."]
+            </li>
+            <li>
+              <strong>Number of Pages:</strong> Up to
+              <strong>[Number_of_Pages]</strong> custom-designed and developed
+              pages.
+            </li>
+            <li>
+              <strong>Key Features & Functionality:</strong>
+              <ul>
+                <li>
+                  [AI: From the `detailed_description`, extract and list the
+                  main functional requirements. For each, provide a brief
+                  explanation of what it entails.]
+                </li>
+                <li>
+                  Example: <strong>Responsive Design:</strong> The website will
+                  be fully responsive, ensuring a seamless experience on
+                  desktops, tablets, and mobile devices.
+                </li>
+                <li>
+                  Example: <strong>E-commerce System:</strong> Full-featured
+                  shopping cart, secure checkout with payment gateway
+                  integration (e.g., Stripe), and order management.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section id="timeline">
+          <h2>4. Project Timeline</h2>
+          <p>
+            We estimate a delivery time of
+            <strong>[Delivery_Time_in_Weeks] weeks</strong> from the official
+            project start date. This timeline is broken down into the following
+            phases:
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Phase</th>
+                <th>Estimated Duration</th>
+                <th>Key Deliverables</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Discovery & Strategy</strong></td>
+                <td>[AI: Calculate as 15% of total time] Weeks</td>
+                <td>Project brief, sitemap, technical specification</td>
+              </tr>
+              <tr>
+                <td><strong>2. UI/UX Design</strong></td>
+                <td>[AI: Calculate as 25% of total time] Weeks</td>
+                <td>Wireframes, high-fidelity mockups</td>
+              </tr>
+              <tr>
+                <td><strong>3. Development</strong></td>
+                <td>[AI: Calculate as 45% of total time] Weeks</td>
+                <td>Functional website on a staging server</td>
+              </tr>
+              <tr>
+                <td><strong>4. Testing & Launch</strong></td>
+                <td>[AI: Calculate as 15% of total time] Weeks</td>
+                <td>QA testing, final revisions, deployment</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="investment">
+          <h2>5. Investment Summary</h2>
+          <p>
+            Our pricing is based on the value delivered and the estimated hours
+            required to meet the project's objectives with the highest quality
+            standards.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Phase 1: Strategy & Design</strong></td>
+                <td>UI/UX Design, Wireframing, Mockups</td>
+                <td>[AI: Calculate Cost]</td>
+              </tr>
+              <tr>
+                <td><strong>Phase 2: Development & CMS</strong></td>
+                <td>Frontend/Backend Dev, Feature Integration</td>
+                <td>[AI: Calculate Cost]</td>
+              </tr>
+              <tr>
+                <td><strong>Revisions & Project Management</strong></td>
+                <td>
+                  Includes <strong>[Number_of_Revisions]</strong> rounds of
+                  revisions, meetings, and communication.
+                </td>
+                <td>[AI: Calculate Cost]</td>
+              </tr>
+              <tr>
+                <td colspan="2"><strong>Subtotal</strong></td>
+                <td><strong>[AI: Calculate Subtotal]</strong></td>
+              </tr>
+              <tr class="total-row">
+                <td colspan="2">Total Project Investment</td>
+                <td>[AI: Calculate Total]</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="exclusions">
+          <h2>6. Clarifications & Scope Exclusions</h2>
+          <p>
+            This estimate is comprehensive for the scope defined above. The
+            following services are not included but can be quoted separately:
+          </p>
+          <ul>
+            <li>
+              Website hosting, domain registration, and SSL certificate fees.
+            </li>
+            <li>Content creation, copywriting, or data entry.</li>
+            <li>Professional photography or videography.</li>
+            <li>
+              Third-party service subscriptions (e.g., email marketing
+              platforms, advanced analytics).
+            </li>
+            <li>
+              Ongoing Search Engine Optimization (SEO) or digital marketing
+              campaigns.
+            </li>
+          </ul>
+        </section>
+
+        <section id="next-steps">
+          <h2>7. Next Steps</h2>
+          <p>Ready to get started? Here’s how we can move forward together:</p>
+          <ol>
+            <li><strong>Acceptance:</strong> Sign and return this estimate.</li>
+            <li>
+              <strong>Payment:</strong> Submit the initial deposit of 50%.
+            </li>
+            <li>
+              <strong>Kickoff:</strong> We'll schedule our official project
+              kickoff meeting to begin the Discovery phase.
+            </li>
+          </ol>
+        </section>
+
+        <section id="terms">
+          <h2>8. Terms & Conditions</h2>
+          <ul>
+            <li>
+              <strong>Payment Schedule:</strong> 50% deposit upon acceptance.
+              50% final payment upon project completion, prior to final delivery
+              and launch.
+            </li>
+            <li>
+              <strong>Revisions:</strong> This estimate includes up to
+              <strong>[Number_of_Revisions]</strong> rounds of revision during
+              the Design and Development phases. Additional revisions will be
+              billed at our standard hourly rate of [Your_Hourly_Rate].
+            </li>
+            <li>
+              <strong>Confidentiality:</strong> All project details and shared
+              information will be kept strictly confidential.
+            </li>
+            <li>
+              <strong>Intellectual Property:</strong> Upon final payment,
+              [Client_Company_Name] will own all rights to the final, delivered
+              website design and code.
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          We are incredibly excited to partner with you on this project. Please
+          don't hesitate to reach out with any questions.
+        </p>
+        <p>
+          Sincerely,<br />
+          <strong>[Your Name/Company Representative]</strong><br />
+          <em>[Your Title]</em>
+        </p>
+
+        <section id="acceptance">
+          <h2>9. Client Acceptance</h2>
+          <p>
+            By signing below, you agree to the scope of work, timeline, and
+            investment detailed in this estimate.
+          </p>
+          <div class="signature-area">
+            <div class="signature-line"></div>
+            <p class="signature-label">Client Signature</p>
+          </div>
+          <div class="signature-area">
+            <div class="signature-line"></div>
+            <p class="signature-label">Printed Name</p>
+          </div>
+          <div class="signature-area">
+            <div class="signature-line"></div>
+            <p class="signature-label">Date</p>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>

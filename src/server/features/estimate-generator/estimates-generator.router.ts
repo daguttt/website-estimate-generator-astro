@@ -1,6 +1,5 @@
 import { Hono } from 'hono';
 import { arktypeValidator } from '@hono/arktype-validator';
-import { logger } from 'hono/logger';
 
 import { type } from 'arktype';
 
@@ -19,7 +18,6 @@ const createEstimateSchema = type({
 
 export const router = new Hono<RouterEnv>()
   .basePath('/estimate-generator')
-  .use(logger())
   .post(
     '/',
     arktypeValidator('json', createEstimateSchema),
